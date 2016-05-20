@@ -34,3 +34,8 @@ alias docker-rm='docker rm $(docker ps -a -q)'
 #alias cat='lolcat'
 alias ls='ls -h --color'
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
