@@ -1,0 +1,13 @@
+[Unit]
+Description=rTorrent
+After=network.target
+
+[Service]
+Type=forking
+KillMode=none
+User=k
+ExecStart=/usr/bin/screen -d -m -fa -S rtorrent /usr/bin/rtorrent
+ExecStop=/usr/bin/killall -w -s 2 /usr/bin/rtorrent
+
+[Install]
+WantedBy=default.target
