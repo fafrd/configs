@@ -34,8 +34,16 @@ alias docker-rm='docker rm $(docker ps -a -q)'
 #alias cat='lolcat'
 alias ls='ls -h --color'
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+alias temp='sensors | grep sensor\ ='
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
+
+# go
+export GOROOT=$HOME/go
+export GOPATH=$HOME/work
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN

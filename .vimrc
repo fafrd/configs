@@ -1,7 +1,7 @@
 syntax on
 
-" set autoindent
-set cindent
+set autoindent
+" set cindent
 
 set hlsearch
 
