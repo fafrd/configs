@@ -20,6 +20,8 @@ alias vi='vim'
 alias tracert='traceroute'
 
 # sudo
+alias yum='sudo yum'
+alias dnf='sudo dnf'
 alias apt-get='sudo apt-get'
 alias dpkg='sudo dpkg'
 alias pacman='sudo pacman'
