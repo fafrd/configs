@@ -25,7 +25,6 @@ alias dnf='sudo dnf'
 alias apt-get='sudo apt-get'
 alias dpkg='sudo dpkg'
 alias pacman='sudo pacman'
-alias pip='sudo pip'
 alias mount='sudo mount'
 
 # docker
