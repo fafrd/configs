@@ -49,3 +49,10 @@ export GOPATH=$HOME/work
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+# berkeleydb under debian
+export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.4.8/include"
+export BDB_LIB_PATH="/usr/local/BerkeleyDB.4.8/lib"
+
+# more bash history
+HISTSIZE=20000
