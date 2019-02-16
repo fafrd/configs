@@ -1,0 +1,28 @@
+# enable vi readline
+set editing-mode vi
+
+# show the insert/command mode before PS1
+set show-mode-in-prompt on
+
+# change ins/com to something else
+#set vi-ins-mode-string i
+#set vi-cmd-mode-string c
+
+# Color files by types
+set colored-stats On
+# Append char to indicate type
+set visible-stats On
+# Mark symlinked directories
+set mark-symlinked-directories On
+# Color the common prefix
+set colored-completion-prefix On
+# Color the common prefix in menu-complete
+set menu-complete-display-prefix On
+
+# map c-l to clear
+$if mode=vi
+set keymap vi-command
+Control-l: clear-screen
+set keymap vi-insert
+Control-l: clear-screen 
+$endif

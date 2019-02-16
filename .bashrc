@@ -11,7 +11,7 @@ export PATH="$PATH:$HOME/bin"
 shopt -s checkwinsize
 
 # Custom prompt
-tty -s && PS1="\[$(tput bold)\]\w \\$ \[$(tput sgr0)\]"
+tty -s && PS1=" \[$(tput bold)\]\w \\$ \[$(tput sgr0)\]"
 
 # Add color
 eval `dircolors -b`
@@ -56,3 +56,4 @@ export BDB_LIB_PATH="/usr/local/BerkeleyDB.4.8/lib"
 
 # more bash history
 HISTSIZE=20000
+
