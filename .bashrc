@@ -44,11 +44,13 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # go
+# 	goroot is the location of go source, should only be set if go is installed in a custom location
+#	gopath is where the src directory lives, up to you
+#	gobin is wherever the binaries should reside, up to you
 export GOROOT=$HOME/go
 export GOPATH=$HOME/work
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # berkeleydb under debian
 export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.4.8/include"
