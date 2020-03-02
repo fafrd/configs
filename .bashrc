@@ -15,6 +15,7 @@ tty -s && PS1=" \[$(tput bold)\]\w \\$ \[$(tput sgr0)\]"
 
 # Add color
 eval `dircolors -b`
+alias less='less -R'
 
 alias vi='vim'
 alias tracert='traceroute'
@@ -50,7 +51,8 @@ fi
 export GOROOT=$HOME/go
 export GOPATH=$HOME/work
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+#export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export CGO_ENABLED=1
 
 # berkeleydb under debian
 export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.4.8/include"
@@ -59,3 +61,11 @@ export BDB_LIB_PATH="/usr/local/BerkeleyDB.4.8/lib"
 # more bash history
 HISTSIZE=20000
 
+# python stuff
+export PATH=$PATH:~/.local/bin
+
+# start ssh-agent
+eval `ssh-agent -s`
+
+# linuxbrew
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
