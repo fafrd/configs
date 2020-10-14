@@ -1,0 +1,11 @@
+# Last Modified: Wed Sep 23 02:28:05 2020
+#include <tunables/global>
+
+/home/bitcoin/bitcoin/bitcoin-0.20.1/bin/bitcoind {
+  #include <abstractions/base>
+
+  /mnt/lemonzest/bitcoin/** rwmkl,
+  /home/bitcoin/bitcoin/** mr,
+  /etc/hosts r,
+
+}

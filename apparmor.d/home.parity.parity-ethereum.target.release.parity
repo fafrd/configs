@@ -1,0 +1,13 @@
+# Last Modified: Wed Sep 23 01:47:27 2020
+#include <tunables/global>
+
+/home/parity/parity-ethereum/target/release/parity {
+  #include <abstractions/base>
+  #include <abstractions/totem>
+
+  /home/parity/parity-config.toml r,
+  /mnt/lemonzest/parity/** rwmkl,
+  /mnt/lemonzest/parity_goerli/** rwmkl,
+  /home/parity/parity-ethereum/target/release/parity mr,
+
+}
