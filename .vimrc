@@ -6,12 +6,18 @@ set encoding=utf-8
 set hlsearch
 " underline current line
 set cursorline
+" highlight column 81
+"set cc=81
 
 " make backspace actually work
 set backspace=indent,eol,start
 
 " spaces are good for you
 set tabstop=4 shiftwidth=4 expandtab
+set cindent
+"set tabstop=8 shiftwidth=8 expandtab
+" tabs chars instead
+"set tabstop=4 shiftwidth=4
 
 " no more temp files
 set noswapfile
@@ -19,6 +25,12 @@ set noswapfile
 " fix split behavior
 set splitbelow
 set splitright
+
+" line numbers
+set number
+
+" turn off auto commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " markdown syntax
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -32,8 +44,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " :W saves the file
 command W w
 
-function ShowSpaces(...)   
-    let @/='\v(\s+$)|( +\ze\t)'    
+function ShowSpaces(...)
+    let @/='\v(\s+$)|( +\ze\t)'
     let oldhlsearch=&hlsearch
     if !a:0
         let &hlsearch=!&hlsearch
@@ -57,8 +69,8 @@ highlight RedundantSpaces ctermbg=green
 match RedundantSpaces /\s\+$/
 
 " show leading spaces (this could probably be cleaned up? pulled from reddit)
-hi Conceal guibg=NONE ctermbg=NONE ctermfg=DarkGrey
-autocmd BufWinEnter * setl conceallevel=2 concealcursor=nv
-autocmd BufWinEnter * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
-autocmd BufReadPre * setl conceallevel=2 concealcursor=nv
-autocmd BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
+"hi Conceal guibg=NONE ctermbg=NONE ctermfg=DarkGrey
+"autocmd BufWinEnter * setl conceallevel=2 concealcursor=nv
+"autocmd BufWinEnter * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
+"autocmd BufReadPre * setl conceallevel=2 concealcursor=nv
+"autocmd BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
