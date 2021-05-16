@@ -13,9 +13,10 @@ export TERM='xterm-256color'
 
 # big history
 SAVEHIST=10000000
+HISTFILE=~/.bash_history
 
 # alias commands to print colors. (even if they're being piped.)
-alias ls='ls -G'
+alias ls='ls --color'
 alias less='less -R'
 alias grep='grep --color=always'
 
@@ -57,7 +58,7 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # update history immediately
-setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY_TIME
 
 # nvm
 export PATH=/Users/kian/.nvm/versions/node/v14.1.0/bin:$PATH
@@ -70,3 +71,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# auto sudo
+alias pacman="sudo pacman"
+alias htop="sudo htop"
